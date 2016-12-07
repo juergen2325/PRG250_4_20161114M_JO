@@ -1,0 +1,13 @@
+body
+{
+	background-color : black;
+	color : white;
+}
+
+table, td {
+   border: 1px solid white;
+}
+
+table tr td {
+	width: 25%;
+}
