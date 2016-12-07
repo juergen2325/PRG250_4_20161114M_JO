@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<!-- 11/15/2016 - Branch off of Master -->
+	<!-- Collaboration - Brad Cavinder -->
+	<head>
+		<title>Week 1 - Review</title>
+		<link rel="stylesheet" type="text/css" href="default.css">
+
+		<script type="text/javascript">
+			function process_application()
+			{
+				window.alert( "process_application being called" );
+			}
+		</script>
+	</head>
+
+	<body>
+		<script type="text/javascript">
+
+			document.write( "Hello World!<br />");
+		</script>
+
+		<form name="DaForm">
+			<!-- bla bla bla -->
+			<table>
+				<tr>
+					<td>First Name </td>
+					<td><input type="text" name="name_first"></td>
+				</tr>
+				<tr>
+					<td>Last Name</td>
+					<td><input type="text" name="name_last"></td>
+				</tr>
+				<tr>
+					<td>SSN</td>
+					<td><input type="text" name="ssn"></td>
+				</tr>
+
+				<tr>
+					<td>Monthly Rent/Mortgage</td>
+					<td><input type="text" name="housing_expense"></td>
+				</tr>
+
+				<tr>
+					<td>Annual Income</td>
+					<td><input type="text" name="annual_income"></td>
+				</tr>
+			</table>
+			<br/>
+			<input type="button" name="btn_submit" value="Submit Application" onclick="process_application()">
+		</form>
+
+	</body>
+</html>

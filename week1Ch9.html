@@ -1,66 +1,21 @@
 <!DOCTYPE html>
 <html>
-
 	<head>
-
 		<title></title>
-
 	</head>
-
 <body>
 
 	<script type="text/javascript">
-		//First we check that we never created a cookie before
+
+		// First we check that we never created a cookie before
 		if( !document.cookie ) {
-
-			var date = new Date();
-
-			date.setFullYear( date.getFullYear() + 1 );
-
-			document.write( "The expiration date is " + date + "<br/>");
-
-			//Creation of the cookie with seperate name-value pairs
-
-			document.cookie = "week1Ch9=A";
-
-			document.cookie = "numberVisits=1";
-
-			document.cookie = "expires=" + date.toUTCString();
-
-			document.write( "Welcome - This is the first time you are visiting this webpage <br/>");
-		} 
-		else { //We have already created a cookie for this page
+			document.cookie = "week1Ch9" + "; " + "numberVisits=1";
+			document.write( "Welcome - this is the 1st time you are visiting this webpage <br />");
+		} else { // We already created a cookie for this page
 			var CookieString = decodeURIComponent( document.cookie );
-
-			document.write( "The value of the cookie is = " + CookieString + "<br/>" )
-
-			var arrayData = CookieString.split("; ");
-
-						var yournumberofVisits;
-			for (var count = 0; count < 3; ++count) {
-
-				yournumberofVisits = arrayData[count];
-
-				if (yournumberofVisits.substring(0,yournumberofVisits.indexOf("="))
-					== "numberVisits") {
-					document.writeln("<p>Your number of visits is "
-						+ yournumberofVisits.substring(yournumberofVisits.indexOf("=")+ 1,
-						yournumberofVisits.length)) + "</p><br/>";
-
-				var numberintextform = yournumberofVisits.substring(yournumberofVisits.indexOf("=")+ 1,yournumberofVisits.length);
-					}
-				}
-			}
-		var numberasinteger = parseInt(numberintextform);
-
-		++numberasinteger;
-
-		var numElements = arrayData.length;
-
-		document.cookie = "numberVisits=" + encodeURIComponent(numberasinteger);
-		
-		document.write( "<p>The number of tokens inside the cookie is = " + numElements + "</p><br/>");
-
+			document.write( "The value of the cookie is = " + CookieString + "<br />");
+		}
+		//strcmp - STR(String) CMP(Compare)
 	</script>
 
 

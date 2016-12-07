@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<script type="text/javascript">
+		function DayOfTheWeekAsText( day_number )
+		{
+			var DayAsText = "";
+			switch( day_number )
+			{
+				case 0 : {
+					DayAsText = "Sunday";
+					break;
+				}
+
+				case 1 : {
+					DayAsText = "Monday";
+					break;
+				}
+
+				case 2 : {
+					DayAsText = "Tuesday";
+					break;
+				}
+
+				case 3 : {
+					DayAsText = "Wednesday";
+					break;
+				}
+
+				case 4 : {
+					DayAsText = "Thursday";
+					break;
+				}
+
+				case 5 : {
+					DayAsText = "Friday";
+					break;
+				}
+
+				case 6 : {
+					DayAsText = "Saturday";
+					break;
+				}
+
+				default : {
+					DayAsText = "Unknown";
+					break;
+				}
+			}
+			return DayAsText;
+		}
+
+		// This function sets the experitation to
+		// the current date of visit, + 1 year
+		function GetExpirationDate(  )
+		{
+			var date = new Date();
+			// the line belo adds another year to the current date of visit
+			date.setFullYear( year + 1 );
+			return date;
+		}
+
+		function ConvertDateToString( date )
+		{
+			var returned_date = toUTCString();
+			return returned_date;
+		}
+
+	</script>
+</head>
+<body>
+	<script type="text/javascript">
+		var date = new Date();
+
+		// This actually returns the day of the month [1-31]
+		var currentDay = date.getDate();
+
+		document.write( "Today's day of the month is " + currentDay + "<br/>");
+
+		// here I get the separate elements making the date
+		var month = date.getMonth();
+		var day = date.getDay();
+		var year = date.getFullYear();
+
+		// Eric looks non - plussed by the class
+		// I call the function which converts the day week
+		// to text
+		var DayAsText = DayOfTheWeekAsText( day );
+		document.write( "Today's day of the week " + DayAsText + "<br/>");
+
+		var expirationDate = GetExpirationDate();
+		document.write( "You cookie will expire on " + expirationDate + "<br/>");
+
+		document.cookie = "test" + "; expires="
+		+ expiresDate.toUTCString();
+	</script>
+
+</body>
+</html>
