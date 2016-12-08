@@ -4,43 +4,28 @@
 	<title></title>
 	<script type="text/javascript">
 		var g_new_window = ( -1 );
-
 		function generate_table()
 		{
-			window.alert("Hey I am running");
-			
-		}
-	</script>
-</head>
-<body>
-
-	<form name="theForm">
-		<select>
-		  <option value="+">+</option>
-		  <option value="*">*</option>
-		</select>
-
-		<input type="number" min=0 max=10 step=1 value=0>
-		<input type="button" value="Generate Table" onclick="generate_table()">
-
-	</form>
-
-<!-- <script type="text/javascript">
-	// This is how to write to the first page 
-	document.write( "Content going to the 1st page" );
-	// how to create a new window:
-	g_new_window = window.open( "", "", "", "" );
-
-	// How to write to the new window:
-	g_new_window.document.write( "This belongs to the second page<br/>" );
-	// this.style.backgroundColor = "black";
-
-	// if we want to wipe out the content of the 2nd window brfore writing to it,
-	// let's do this instead
-	g_new_window.document.open();
-
-	g_new_window.document.write( "This should replace the 1st content of our second page" );
-
+			// In the following lines, I capture the values of the 2
+			// inputs I selected, and then display those inputs with
+			// window.alert
+			//window.alert( "call me" );
+			var operation_selection = document.theForm.selection_menu.value;
+			var selected_number = document.theForm.selected_number.value;
+			var i = 1;
+			var i2Str = i.toString();
+			var expr = selected_number + operation_selection + i2Str;
+			var res = eval( expr );
+			window.alert( expr + " is equal to" + res );
+			// window.alert("Hey I am running");
+			g_new_window = window.open( "", "", "", "" );
+			// How to write to the new window:
+			g_new_window.document.write( "This belongs to the second page<br/>" );
+			// this.style.backgroundColor = "black";
+			// if we want to wipe out the content of the 2nd window brfore writing to it,
+			// let's do this instead
+			g_new_window.document.open();
+			g_new_window.document.write( "This should replace the 1st content of our second page" );
 			g_new_window.document.write( "<table>" );
 			g_new_window.document.write( "	<tr>" );
 			g_new_window.document.write( "		<td>1</td>" );
@@ -53,7 +38,27 @@
 			g_new_window.document.write( "		<td>6</td>" );
 			g_new_window.document.write( "	</tr>" );
 			g_new_window.document.write( "</table>" );
-</script> -->
+		}
+	</script>
+</head>
+<body>
+
+	<form name="theForm">
+		<select name="selection_menu">
+		  <option value="+">+</option>
+		  <option value="*">*</option>
+		</select>
+
+		<input name="selected_number" type="number" min=0 max=10 step=1 value=0>
+		<input type="button" value="Generate Table" onclick="generate_table()">
+
+	</form>
+
+<script type="text/javascript">
+	// This is how to write to the first page 
+	document.write( "Content going to the 1st page" );
+	// how to create a new window:
+</script>
 
 			<!-- Let's lean how to generate a 2 by 3 table -->
 <!-- 			<table>
