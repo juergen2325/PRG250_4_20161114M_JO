@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <style>
+    .dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    }
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        right: 0;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    }
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    .dropdown-content a:hover {background-color: #f1f1f1}
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    .dropdown:hover .dropbtn {
+        background-color: #3e8e41;
+    }
+    </style>
+    </head>
+    <body>     
+
+    <h1>Sports Menu</h1>
+
+            <div class="dropdown">
+            <button class="dropbtn">Soccer</button>
+            <div class="dropdown-content" style="left:0;">
+            <a href="http://www.soccer.com/shop/fan/" target="_blank">Fan</a>
+            <a href="http://www.soccer.com/shop/footwear/" target="_blank">Footwear</a>
+            <a href="http://www.soccer.com/shop/apparel/" target="_blank">Apparel</a>
+          </div>
+        </div>
+
+            <div class="dropdown">
+            <button class="dropbtn">Football</button>
+            <div class="dropdown-content" style="left:0;">
+            <a href="http://www.nfl.com/news" target="_blank">News</a>
+            <a href="http://www.nfl.com/scores" target="_blank">Scores</a>
+            <a href="http://www.nfl.com/standings" target="_blank">Standings</a>
+          </div>
+        </div>
+
+            <div class="dropdown">
+            <button class="dropbtn">Basketball</button>
+            <div class="dropdown-content" style="left:0;">
+            <a href="http://www.nba.com/games/20161206/ORLWAS?left=true#/video" target="_blank">Games</a>
+            <a href="http://www.nba.com/standings" target="_blank">Standings</a>
+            <a href="http://www.nba.com/teams" target="_blank">Teams</a>
+          </div>
+        </div>
+
+            <div class="dropdown">
+            <button class="dropbtn">Golf</button>
+            <div class="dropdown-content" style="left:0;">
+          <a href="http://www.golf.com/" target="_blank">News</a>
+        <a href="http://www.golf.com/videos/episodes/fix-finder" target="_blank">Fix Finder</a>
+        <a href="http://www.golf.com/equipment" target="_blank">Equipment</a>
+          </div>
+        </div>
+
+
+        <script>
+                // Toggle between visible and invisible
+                function myFunction() {
+                    document.getElementById("myDropdown").classList.toggle("show");
+                }
+                // Close the dropdown if the user clicks outside of it
+                window.onclick = function(event) {
+                  if (!event.target.matches('.dropbtn')) {
+                    var dropdowns = document.getElementsByClassName("dropdown-content");
+                    var i;
+                    for (i = 0; i < dropdowns.length; i++) {
+                      var openDropdown = dropdowns[i];
+                      if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                      }
+                    }
+                  }
+                }
+        </script>
+    </body>
+</html>

@@ -12,10 +12,6 @@
 			//window.alert( "call me" );
 			var operation_selection = document.theForm.selection_menu.value;
 			var selected_number = document.theForm.selected_number.value;
-			var i = 1;
-			var i2Str = i.toString();
-			var expr = selected_number + operation_selection + i2Str;
-			var res = eval( expr );
 			window.alert( expr + " is equal to" + res );
 			// window.alert("Hey I am running");
 			g_new_window = window.open( "", "", "", "" );
@@ -27,16 +23,14 @@
 			g_new_window.document.open();
 			g_new_window.document.write( "This should replace the 1st content of our second page" );
 			g_new_window.document.write( "<table>" );
-			g_new_window.document.write( "	<tr>" );
-			g_new_window.document.write( "		<td>1</td>" );
-			g_new_window.document.write( "		<td>2</td>" );
-			g_new_window.document.write( "		<td>3</td>" );
-			g_new_window.document.write( "	</tr>" );
-			g_new_window.document.write( "	<tr>" );
-			g_new_window.document.write( "		<td>4</td>" );
-			g_new_window.document.write( "		<td>5</td>" );
-			g_new_window.document.write( "		<td>6</td>" );
-			g_new_window.document.write( "	</tr>" );
+			for (var i=1; i<11; i++) {
+				var i2Str = i.toString();
+				var expr = selected_number + operation_selection + i2Str;
+				var res = eval( expr );
+				g_new_window.document.write( "	<tr>" );
+				g_new_window.document.write( "		<td>" + selected_number + operation_selection + i + "= " + res + "</td>" );
+				g_new_window.document.write( "	</tr>" );
+			}
 			g_new_window.document.write( "</table>" );
 		}
 	</script>
