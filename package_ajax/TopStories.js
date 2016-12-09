@@ -25,7 +25,7 @@
         var recentNews;
 
 
-        
+
         function newsUpdate() {
             if (!newsRequest)
                 newsRequest = getRequestObject();
@@ -76,5 +76,15 @@
             changeHeadlines = setTimeout('scrollHeadlines()', 100);
         }
 
+function PopulateValues()
+{
+    var ar = new Array();
+    ar [ 0 ] = "http://my.abcnews.go.com/rsspublic/fp_rss20.xml"
+    ar [ 1 ] = "http://newsrss.bbc.co.uk/rss/newsonline_uk_edition/front_page/rss.xml"
+    ar [ 2 ] = "http://www.cbsnews.com/feeds/rss/main.rss"
+    ar [ 3 ] = "http://rss.cnn.com/rss/cnn_topstories.rss"
+    ar [ 4 ] = "http://rss.msnbc.msn.com/id/3032091/device/rss/rss.xml"
+    ar [ 5 ] = "http://rss.news.yahoo.com/rss/topstories"
+}
 
         /* ]]> */
